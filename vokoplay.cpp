@@ -62,7 +62,7 @@ void vokoplay::prepare()
   connect( myUi.pause, SIGNAL( clicked() ), SLOT( pause() ) );
   connect( myUi.mute, SIGNAL( clicked() ), SLOT( mute() ) );
   myUi.mute->setText( "" );
-  myUi.mute->setIcon( QIcon::fromTheme( "audio-volume-medium", QIcon( ":/pictures/save.png" ) ) );
+  myUi.mute->setIcon( QIcon::fromTheme( "audio-volume-medium", QIcon( ":/pictures/audio-volume-on.png" ) ) );
   connect( myUi.horizontalSlider, SIGNAL( sliderMoved( int ) ), SLOT( sliderMoved( int ) ) );
 
   play();
@@ -91,13 +91,13 @@ void vokoplay::mute()
 {
   if ( player->isMuted() == false )
   {
-    myUi.mute->setIcon( QIcon::fromTheme( "audio-volume-muted", QIcon( ":/pictures/save.png" ) ) );
+    myUi.mute->setIcon( QIcon::fromTheme( "audio-volume-muted", QIcon( ":/pictures/audio-volume-off.png" ) ) );
     player->setMuted( true );
   }
   else
   {
     player->setMuted( false );
-    myUi.mute->setIcon( QIcon::fromTheme( "audio-volume-medium", QIcon( ":/pictures/save.png" ) ) );
+    myUi.mute->setIcon( QIcon::fromTheme( "audio-volume-medium", QIcon( ":/pictures/audio-volume-on.png" ) ) );
   }
 }
 

@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = vokoplay1.0.0
-DISTDIR = /home/vk/Dokumente/vokoplay/.tmp/vokoplay1.0.0
+DISTDIR = /home/vk/mnt-nfs/Daten/Volker/Programmieren/qt/vokoplayer/.tmp/vokoplay1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath-link,/usr/lib64
 LIBS          = $(SUBLIBS) -lQt5MultimediaWidgets -L/usr/lib64 -lQt5Widgets -lQt5Multimedia -lQt5Gui -lQt5Network -lQt5Core -lGL -lpthread 
@@ -454,7 +454,8 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_vokoplay.cpp
 qrc_vokoplay.cpp: vokoplay.qrc \
 		VERSION \
-		pictures/save.png
+		pictures/audio-volume-off.png \
+		pictures/audio-volume-on.png
 	/usr/lib64/qt5/bin/rcc -name vokoplay vokoplay.qrc -o qrc_vokoplay.cpp
 
 compiler_moc_header_make_all: moc_vokoplay.cpp moc_QvkVideoSurface.cpp
@@ -462,10 +463,10 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) moc_vokoplay.cpp moc_QvkVideoSurface.cpp
 moc_vokoplay.cpp: ui_vokoplay.h \
 		vokoplay.h
-	/usr/lib64/qt5/bin/moc $(DEFINES) -I/usr/lib64/qt5/mkspecs/linux-g++ -I/home/vk/Dokumente/vokoplay -I/home/vk/Dokumente/vokoplay -I/usr/include/qt5 -I/usr/include/qt5/QtMultimediaWidgets -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtMultimedia -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/include/c++/4.8 -I/usr/include/c++/4.8/x86_64-suse-linux -I/usr/include/c++/4.8/backward -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include-fixed -I/usr/x86_64-suse-linux/include -I/usr/include vokoplay.h -o moc_vokoplay.cpp
+	/usr/lib64/qt5/bin/moc $(DEFINES) -I/usr/lib64/qt5/mkspecs/linux-g++ -I/home/vk/mnt-nfs/Daten/Volker/Programmieren/qt/vokoplayer -I/home/vk/mnt-nfs/Daten/Volker/Programmieren/qt/vokoplayer -I/usr/include/qt5 -I/usr/include/qt5/QtMultimediaWidgets -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtMultimedia -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/include/c++/4.8 -I/usr/include/c++/4.8/x86_64-suse-linux -I/usr/include/c++/4.8/backward -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include-fixed -I/usr/x86_64-suse-linux/include -I/usr/include vokoplay.h -o moc_vokoplay.cpp
 
 moc_QvkVideoSurface.cpp: QvkVideoSurface.h
-	/usr/lib64/qt5/bin/moc $(DEFINES) -I/usr/lib64/qt5/mkspecs/linux-g++ -I/home/vk/Dokumente/vokoplay -I/home/vk/Dokumente/vokoplay -I/usr/include/qt5 -I/usr/include/qt5/QtMultimediaWidgets -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtMultimedia -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/include/c++/4.8 -I/usr/include/c++/4.8/x86_64-suse-linux -I/usr/include/c++/4.8/backward -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include-fixed -I/usr/x86_64-suse-linux/include -I/usr/include QvkVideoSurface.h -o moc_QvkVideoSurface.cpp
+	/usr/lib64/qt5/bin/moc $(DEFINES) -I/usr/lib64/qt5/mkspecs/linux-g++ -I/home/vk/mnt-nfs/Daten/Volker/Programmieren/qt/vokoplayer -I/home/vk/mnt-nfs/Daten/Volker/Programmieren/qt/vokoplayer -I/usr/include/qt5 -I/usr/include/qt5/QtMultimediaWidgets -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtMultimedia -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/include/c++/4.8 -I/usr/include/c++/4.8/x86_64-suse-linux -I/usr/include/c++/4.8/backward -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include-fixed -I/usr/x86_64-suse-linux/include -I/usr/include QvkVideoSurface.h -o moc_QvkVideoSurface.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:

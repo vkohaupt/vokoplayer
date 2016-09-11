@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = vokoplay
+TARGET = vokoplayer
 DEPENDPATH += .
 INCLUDEPATH += .
 

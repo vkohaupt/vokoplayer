@@ -1,6 +1,7 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource>
 <file>VERSION</file>
-<file>pictures/save.png</file>
+<file>pictures/audio-volume-off.png</file>
+<file>pictures/audio-volume-on.png</file>
 </qresource>
 </RCC>
