@@ -36,8 +36,8 @@ Makefile
 !.gitignore
 *~
 
-# vokoscreen
+# Player
 language/*.qm
-vokoplayer
+player
 
 
